@@ -7,7 +7,8 @@ const Addsuppliers = () => {
         <section className="bg-gray-50 ">
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-900 ">
-          <img className="w-20 h-8 mr-6" src={logo} alt="logo"/>
+      <img className="w-28 h-12 mr-6" src={logo} alt="logo"/>
+
           Add Suppliers
       </a>
       <div className="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-gray-10 dark:border-gray-600">
@@ -23,6 +24,10 @@ const Addsuppliers = () => {
                   <div>
                       <label htmlFor="Location" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900">Location</label>
                       <input type="text" name="password" id="password" placeholder="Enter Your Location" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                  </div>
+                  <div>
+                      <label htmlFor="Location" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900">Contact</label>
+                      <input type="text" name="password" id="password" placeholder="Enter Contact Number" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
                   </div>
                   <div className="flex items-center justify-between">
                       <div className="flex items-start">

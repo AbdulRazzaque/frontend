@@ -165,32 +165,51 @@ const Stockout = () => {
           <h1 className='text-center my-8 font-bold text-2xl'>Stock Out</h1>
         <Container>
         <Stack direction="row" spacing={2}>
-    {/* <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doc Number" variant="outlined"  /> */}
+    <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doc Number" variant="outlined"  />
 
         <Autocomplete
       disablePortal
       id="combo-box-demo"
       options={top100Films}
-      sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Suplire Name" />}
+      sx={{ width: 200 }}
+      renderInput={(params) => <TextField {...params} label="Location Name" />}
+    />
+    <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doctor" variant="outlined"  />
+
+        <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={top100Films}
+      sx={{ width: 200 }}
+      renderInput={(params) => <TextField {...params} label="Trainer Name" />}
     />
         <Autocomplete
       disablePortal
       id="combo-box-demo"
       options={top100Films}
-      sx={{ width: 300 }}
+      sx={{ width: 200 }}
+      renderInput={(params) => <TextField {...params} label="Suplire Name" />}
+    />
+    </Stack>
+    <Stack direction="row" spacing={2} marginTop="10px">
+    <TextField type="date" sx={{width:200}} id="outlined-basic" label="" variant="outlined"  />
+
+        <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={top100Films}
+      sx={{ width: 200 }}
       renderInput={(params) => <TextField  {...params} label="Select Products" />}
     />
         <Autocomplete
       disablePortal
       id="combo-box-demo"
       options={top100Films}
-      sx={{ width: 150 }}
+      sx={{ width: 200 }}
       renderInput={(params) => <TextField  {...params} label="Select Unit" />}
     />
     
     <TextField type="number" sx={{width:200}} id="outlined-basic" label="Quantity" variant="outlined"  />
-    <TextField type="number" sx={{width:200}} id="outlined-basic" label="Selling price" variant="outlined"  />
 
     </Stack>
  
