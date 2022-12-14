@@ -132,6 +132,7 @@ const top100Films = [
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
+
   { field: 'productsname', headerName: 'Products name', width: 130 },
   { field: 'productstype', headerName: 'Suplire', width: 130 },
   {field: 'unit',headerName: 'unit',type: 'Quantity',width: 90,},
@@ -164,7 +165,7 @@ const Stockout = () => {
           <h1 className='text-center my-8 font-bold text-2xl'>Stock Out</h1>
         <Container>
         <Stack direction="row" spacing={2}>
-    <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doc Number" variant="outlined"  />
+    {/* <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doc Number" variant="outlined"  /> */}
 
         <Autocomplete
       disablePortal
@@ -195,7 +196,7 @@ const Stockout = () => {
  
     <div className='mt-3 ali'>
 
-  <center>  <Button variant="contained" alignItems="center">Submit</Button></center> 
+  <center>  <Button variant="contained" alignitems="center">Submit</Button></center> 
     </div>
 
         </Container>
@@ -210,10 +211,10 @@ const Stockout = () => {
         // checkboxSelection
       />
     </div>
-
-    <center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative ">Print </button></center> 
-
-
+    <div className='flex justify-center'> 
+      <center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative mx-2 ">Print </button></center> 
+      <center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative ">Save </button></center> 
+      </div>
     </div>
   )
 }

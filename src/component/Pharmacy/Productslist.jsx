@@ -1,45 +1,76 @@
 import React from 'react'
-import { DataGrid } from '@mui/x-data-grid';
+import { Link } from 'react-router-dom'
 
-const columns = [
-    { field: 'id', headerName: 'SR NO', width: 70 },
-    { field: 'Itemcode', headerName: 'Item Cod', width: 130 },
-    { field: 'firstName', headerName: 'porducts Name', width: 130 },
-    { field: 'productstype', headerName: 'porducts Type', width: 130 },
-    { field: 'lastName', headerName: 'Supplier Name', width: 130 },
-    {field: 'age',headerName: 'quantity',type: 'number',width: 90,},
-    {field: 'price',headerName: 'price',type: 'number',width: 90,},
 
-  ];
-  
-  const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  ];
-  
 const Productslist = () => {
   return (
     <div>
-    <div>
-        <h1 className='text-center my-8 font-bold text-2xl'>Products List</h1>
+          <h1 className='text-center my-8 font-bold text-2xl'>Prodcts List</h1>
+      
+<div className="flex flex-col">
+  <div className="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+    <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+      <div className="overflow-hidden">
+        <table className="min-w-full">
+          <thead className="bg-white border-b">
+            <tr>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                SNO
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+              Products Name
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+              Quantity
+              </th>
+        
+            </tr>
+          </thead>
+          <tbody>
+       
+       <tr className="bg-gray-100 border-b">
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+              <Link to="/transactionlist">    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              Vitamin C Troy
+              </td></Link> 
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+               50
+              </td>
+            </tr> 
+            <tr className="bg-white border-b">
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              Histamil 50 ML
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+               67
+              </td>
+            </tr>
+            <tr className="bg-gray-100 border-b">
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              Nova Par
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+               130
+              </td>
+            </tr>
+            <tr className="bg-white border-b">
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4</td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              Xylazine
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+               78
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div style={{ height: 800, width: '100%', marginTop:'10px', padding:'5px'}}>
-    <DataGrid
-      rows={rows}
-      columns={columns}
-      pageSize={10}
-      rowsPerPageOptions={[10]}
-      checkboxSelection
-    />
   </div>
-<center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-3 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative ">Grand Total = </button></center> 
+</div>
   </div>
   )
 }
