@@ -130,6 +130,7 @@ const Monthlyreport = () => {
     { label: 'Monty Python and the Holy Grail', year: 1975 },
   ];
   const [columns, setColumns] = useState([
+    { title: 'Sno', field: 'sno' },
     { title: 'Date', field: 'name' },
     { title: 'Products Name/unit', field: 'name' },
     { title: 'company Name', field: 'name' },
@@ -155,6 +156,14 @@ const Monthlyreport = () => {
           options={top100Films}
           sx={{ width: 200 }}
           renderInput={(params) => <TextField {...params} label="Select Location" />}
+          
+        />
+     <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={top100Films}
+          sx={{ width: 200 }}
+          renderInput={(params) => <TextField {...params} label="Select Trainer" />}
           
         />
 
@@ -183,6 +192,7 @@ const Monthlyreport = () => {
     />
     </ThemeProvider>
   <center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative my-2">Print </button></center> 
+  <center> <button type="submit" className=" text-white bg-red-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative my-2">Grand Total = </button></center> 
 
     </div>
   )

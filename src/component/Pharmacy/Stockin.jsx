@@ -129,17 +129,14 @@ const top100Films = [
   ];
   
 const columns = [
-    { field: 'id', headerName: 'SrNO', width: 70 },
-    { field: 'item code', headerName: 'Item Code', width: 130 },
-    { field: 'Supplier Doc ', headerName: 'Supplier Doc No', width: 130 },
-    {field: 'Suplire',headerName: 'Suplire name',type: 'number',width: 130,},
-    { field: 'productsname', headerName: 'Products name', width: 130 },
-    { field: 'productstype', headerName: 'Products type', width: 130 },
-    {field: 'unit',headerName: 'unit',type: 'number',width: 90,},
-    {field: 'Expiry',headerName: 'Expiry',type: 'number',width: 90,},
-    {field: 'Price',headerName: 'Price',type: 'number',width: 90,},
+    { field: 'id', headerName: 'SNO', width: 70 },
+
+    { field: 'productsname', headerName: 'Products name/unit', width: 150 },
     {field: 'Quantity',headerName: 'Quantity',type: 'number',width: 90,},
+    { field: 'productstype', headerName: 'Products type', width: 130 },
+    {field: 'unit',headerName: 'unitPrice',type: 'number',width: 90,},
     {field: 'total',headerName: 'total',type: 'number',width: 90,},
+    {field: 'Expiry',headerName: 'Expiry',type: 'number',width: 90,},
   ];
   const rows = [
     { id: 1, productstype: 'Durg', productsname: 'Medicine1', unit: 1.4 },
@@ -164,8 +161,8 @@ const Stockin = () => {
         <div className=''>
               <h1 className='text-center my-8 font-bold text-2xl'>Stock In</h1>
             <Container>
-            <Stack direction="row" spacing={2}>
-        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Item code " variant="outlined"  />
+            <Stack direction="row" spacing={2} justifyContent='center'>
+        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doc No" variant="outlined"  />
         <TextField type="number" sx={{width:200}} id="outlined-basic" label="Supplier Doc No" variant="outlined"  />
 
             <Autocomplete
@@ -183,27 +180,19 @@ const Stockin = () => {
           renderInput={(params) => <TextField  {...params} label="Add Products " />}
         />
           
-            <Autocomplete
+       
+    
+        </Stack>
+        <Stack direction="row" spacing={2} justifyContent='center' marginTop="5px">
+        <Autocomplete
           disablePortal
           id="combo-box-demo"
           options={top100Films}
           sx={{ width: 200 }}
           renderInput={(params) => <TextField {...params} label="Product Type" />}
         />
-    
-        </Stack>
-        <Stack direction="row" spacing={2} mt="10px">
-    
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={top100Films}
-          sx={{ width: 200 }}
-          renderInput={(params) => <TextField {...params} label="Product Unit" />}
-          
-        />
+        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Quantity" variant="outlined"  />
         <TextField type="number" sx={{width:200}} id="outlined-basic" label="Price" variant="outlined"  />
-        <TextField type="number" sx={{width:200}} id="outlined-basic" label="QUANTITY" variant="outlined"  />
         <TextField type="number" sx={{width:200}} id="outlined-basic" label="Expiry" variant="outlined"  />
 
     
@@ -232,6 +221,7 @@ const Stockin = () => {
         <div className='flex justify-center'> 
       <center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative mx-2 ">Print </button></center> 
       <center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative ">Save </button></center> 
+      <center> <button type="submit" className=" text-white bg-red-500 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative mx-3">Grand Total = </button></center> 
       </div>
         </div>
       )

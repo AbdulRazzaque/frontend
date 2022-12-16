@@ -131,14 +131,8 @@ const top100Films = [
 ];
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  {field: 'documnet number',headerName: 'Document Number',type: 'number',width: 130,},
-  {field: 'Location Name',headerName: 'Location Name',type: 'number',width: 130,},
-  {field: 'Doctor',headerName: 'Doctor',type: 'number',width: 130,},
-  {field: 'Trainer Name',headerName: 'Trainer Name',type: 'number',width: 130,},
-
-  { field: 'productsname', headerName: 'Products name', width: 130 },
-  {field: 'unit',headerName: 'unit',type: 'Quantity',width: 90,},
+  { field: 'id', headerName: 'Sno', width: 70 },
+  { field: 'productsname', headerName: 'Products name/unit', width: 150 },
   {field: 'Quantity',headerName: 'Quantity',type: 'Selling price',width: 90,},
   {field: 'price',headerName: 'price',type: 'number',width: 90,},
   {field: 'total',headerName: 'total',type: 'number',width: 90,},
@@ -178,6 +172,13 @@ const Stockout = () => {
       sx={{ width: 200 }}
       renderInput={(params) => <TextField {...params} label="Location Name" />}
     />
+            <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={top100Films}
+      sx={{ width: 200 }}
+      renderInput={(params) => <TextField {...params} label="Trainer Name" />}
+    />
         <Autocomplete
       disablePortal
       id="combo-box-demo"
@@ -186,13 +187,7 @@ const Stockout = () => {
       renderInput={(params) => <TextField {...params} label="Doctor" />}
     />
 
-        <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={top100Films}
-      sx={{ width: 200 }}
-      renderInput={(params) => <TextField {...params} label="Trainer Name" />}
-    />
+
 
     </Stack>
     <Stack direction="row" justifyContent="center" spacing={2} marginTop="5px">
