@@ -132,11 +132,15 @@ const top100Films = [
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
+  {field: 'documnet number',headerName: 'Document Number',type: 'number',width: 130,},
+  {field: 'Location Name',headerName: 'Location Name',type: 'number',width: 130,},
+  {field: 'Doctor',headerName: 'Doctor',type: 'number',width: 130,},
+  {field: 'Trainer Name',headerName: 'Trainer Name',type: 'number',width: 130,},
 
   { field: 'productsname', headerName: 'Products name', width: 130 },
-  { field: 'productstype', headerName: 'Suplire', width: 130 },
   {field: 'unit',headerName: 'unit',type: 'Quantity',width: 90,},
   {field: 'Quantity',headerName: 'Quantity',type: 'Selling price',width: 90,},
+  {field: 'price',headerName: 'price',type: 'number',width: 90,},
   {field: 'total',headerName: 'total',type: 'number',width: 90,},
 
 ];
@@ -164,7 +168,7 @@ const Stockout = () => {
     <div className=''>
           <h1 className='text-center my-8 font-bold text-2xl'>Stock Out</h1>
         <Container>
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" justifyContent="center" spacing={2}>
     <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doc Number" variant="outlined"  />
 
         <Autocomplete
@@ -174,7 +178,13 @@ const Stockout = () => {
       sx={{ width: 200 }}
       renderInput={(params) => <TextField {...params} label="Location Name" />}
     />
-    <TextField type="number" sx={{width:200}} id="outlined-basic" label="Doctor" variant="outlined"  />
+        <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={top100Films}
+      sx={{ width: 200 }}
+      renderInput={(params) => <TextField {...params} label="Doctor" />}
+    />
 
         <Autocomplete
       disablePortal
@@ -183,15 +193,9 @@ const Stockout = () => {
       sx={{ width: 200 }}
       renderInput={(params) => <TextField {...params} label="Trainer Name" />}
     />
-        <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={top100Films}
-      sx={{ width: 200 }}
-      renderInput={(params) => <TextField {...params} label="Suplire Name" />}
-    />
+
     </Stack>
-    <Stack direction="row" spacing={2} marginTop="10px">
+    <Stack direction="row" justifyContent="center" spacing={2} marginTop="5px">
     <TextField type="date" sx={{width:200}} id="outlined-basic" label="" variant="outlined"  />
 
         <Autocomplete

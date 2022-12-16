@@ -151,8 +151,7 @@ const Stockoutinfo = () => {
         <Container>
         <Stack direction="row" spacing={2} flex justifyContent="center">
       <TextField type="number" sx={{width:200}} id="outlined-basic" label="Supplier Doc No" variant="outlined"  />
-      <TextField type="Date" sx={{width:200}} id="outlined-basic" label="" variant="outlined"  />
-      <TextField type="text" sx={{width:200}} id="outlined-basic" label="Supplier Name" variant="outlined"  />
+      <TextField type="text" sx={{width:200}} id="outlined-basic" label="Date" variant="outlined"  />
 
 
 

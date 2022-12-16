@@ -131,8 +131,8 @@ const Monthlyreport = () => {
   ];
   const [columns, setColumns] = useState([
     { title: 'Date', field: 'name' },
-    { title: 'Products Name', field: 'name' },
-    { title: 'Products Unit', field: 'name' },
+    { title: 'Products Name/unit', field: 'name' },
+    { title: 'company Name', field: 'name' },
     { title: 'Qauntity', field: 'surname', initialEditValue: 'initial edit value' },
     { title: 'Price', field: 'birthYear', type: 'numeric' },
     {title: 'total',field: 'birthCity',lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },},
@@ -163,7 +163,7 @@ const Monthlyreport = () => {
   <center> <button type="submit" className=" text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative my-2">Submit </button></center> 
       <ThemeProvider theme={defaultMaterialTheme}>
        <MaterialTable
-      title="Bulk Edit Preview"
+      title="Monthly Report"
       columns={columns}
       data={data}
       editable={{

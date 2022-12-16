@@ -212,7 +212,7 @@ const Stockin = () => {
         </Stack>
         <div className='mt-3 ali'>
     
-      <center>  <Button variant="contained" alignItems="center">Submit</Button></center> 
+      <center>  <Button variant="contained" alignitems="center">Submit</Button></center> 
         </div>
     
             </Container>
