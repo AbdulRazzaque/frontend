@@ -22,13 +22,16 @@ import Monthlyreport from "./component/Pharmacy/Monthlyreport";
 import Stockinventoty from "./component/Pharmacy/Stockinventoty";
 import Stockoutsearch from "./component/Pharmacy/Stockoutsearch";
 import Stockoutdetails from "./component/Pharmacy/Stockoutdetails";
+import Navbar from "./component/Navbar";
 function App() {
   return (
     <div className="App">
-      
+
       <Routes>
         {/* this is path Forent page for user and admin  */}
-      <Route path="/" element={<Login />}/>
+        {/* <Route path="/" element={<Navbar />}/> */}
+      <Route path="/" element={<Login />}/> 
+
 
       {/* Path only for admin  */}
       <Route path="/adminlogin" element={<AdminLogin />}/>

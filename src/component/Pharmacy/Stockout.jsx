@@ -134,8 +134,6 @@ const columns = [
   { field: 'id', headerName: 'Sno', width: 70 },
   { field: 'productsname', headerName: 'Products name/unit', width: 150 },
   {field: 'Quantity',headerName: 'Quantity',type: 'Selling price',width: 90,},
-  {field: 'price',headerName: 'price',type: 'number',width: 90,},
-  {field: 'total',headerName: 'total',type: 'number',width: 90,},
 
 ];
 
@@ -214,7 +212,7 @@ const Stockout = () => {
  
     <div className='mt-3 ali'>
 
-  <center>  <Button variant="contained" alignitems="center">Submit</Button></center> 
+  <center>  <Button variant="contained" alignitems="center">Add</Button></center> 
     </div>
 
         </Container>

@@ -184,6 +184,11 @@ const Stockin = () => {
     
         </Stack>
         <Stack direction="row" spacing={2} justifyContent='center' marginTop="5px">
+   
+        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Quantity" variant="outlined"  />
+        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Price" variant="outlined"  />
+        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Expiry" variant="outlined"  />
+
         <Autocomplete
           disablePortal
           id="combo-box-demo"
@@ -191,17 +196,12 @@ const Stockin = () => {
           sx={{ width: 200 }}
           renderInput={(params) => <TextField {...params} label="Product Type" />}
         />
-        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Quantity" variant="outlined"  />
-        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Price" variant="outlined"  />
-        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Expiry" variant="outlined"  />
-
-    
     
     
         </Stack>
         <div className='mt-3 ali'>
     
-      <center>  <Button variant="contained" alignitems="center">Submit</Button></center> 
+      <center>  <Button variant="contained" alignitems="center">Add</Button></center> 
         </div>
     
             </Container>
