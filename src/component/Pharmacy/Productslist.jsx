@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import InventoryNavbar from '../Navbar/InventoryNavbar'
 
 
 const Productslist = () => {
   return (
     <div>
+        <InventoryNavbar/>
           <h1 className='text-center my-8 font-bold text-2xl'>Prodcts List</h1>
       
 <div className="flex flex-col">

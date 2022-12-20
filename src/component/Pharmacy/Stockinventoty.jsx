@@ -3,6 +3,7 @@ import { Autocomplete, Button, Container, Stack, TextField } from '@mui/material
 
 
 import { DataGrid } from '@mui/x-data-grid';
+import InventoryNavbar from '../Navbar/InventoryNavbar';
 
 const top100Films = [
   { label: 'The Shawshank Redemption', year: 1994 },
@@ -161,6 +162,7 @@ const rows = [
 const Stockinventoty = () => {
   return (
     <div className=''>
+        <InventoryNavbar/>
           <h1 className='text-center my-8 font-bold text-2xl'>Stock inventroy</h1>
         <Container>
         <Stack direction="row" spacing={2} justifyContent="center">

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import InventoryNavbar from '../Navbar/InventoryNavbar'
 import Monthlyreport from './Monthlyreport'
 import Productslist from './Productslist'
 import Stockin from './Stockin'
@@ -10,7 +11,7 @@ const Dataentry = () => {
   const [text,setText]=useState(<Productslist/>)
   return (
     <div>
-    
+    <InventoryNavbar/>
 <div className='flex items-center justify-center mt-4'>
  
 <button className="flex px-3 py-2 bg-yellow-400 mr-1 text-white font-semibold rounded" onClick={()=> setText(<Productslist/>)}>

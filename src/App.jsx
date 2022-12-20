@@ -22,20 +22,21 @@ import Monthlyreport from "./component/Pharmacy/Monthlyreport";
 import Stockinventoty from "./component/Pharmacy/Stockinventoty";
 import Stockoutsearch from "./component/Pharmacy/Stockoutsearch";
 import Stockoutdetails from "./component/Pharmacy/Stockoutdetails";
-import Navbar from "./component/Navbar";
+import Navbar1 from "./component/Navbar/AdminNavbar";
 function App() {
   return (
     <div className="App">
+     
 
       <Routes>
         {/* this is path Forent page for user and admin  */}
-        {/* <Route path="/" element={<Navbar />}/> */}
+      
       <Route path="/" element={<Login />}/> 
-
+      
 
       {/* Path only for admin  */}
       <Route path="/adminlogin" element={<AdminLogin />}/>
-      <Route path="/addgroups" element={<Addgroups />}/>
+      {/* <Route path="/addgroups" element={<Addgroups />}/> */}
       <Route path="/adminpanel" element={<AdminPanel />}/>
         <Route  path="/addproducts" element={<Addproducts/>} />
         <Route  path="/Addsuppliers" element={<Addsuppliers/>} />
@@ -57,7 +58,7 @@ function App() {
         <Route  path="/stockoutinfo" element={<Stockoutinfo/>} />
         <Route  path="/monthlyreport" element={<Monthlyreport/>} />
         <Route  path="/stockinventoty" element={<Stockinventoty/>} />
-        <Route  path="/stockinventoty" element={<Stockoutsearch/>} />
+        <Route  path="/stockoutsearch" element={<Stockoutsearch/>} />
         <Route  path="/stockoutdetails" element={<Stockoutdetails/>} />
  
 

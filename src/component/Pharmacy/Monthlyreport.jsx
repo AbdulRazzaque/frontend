@@ -1,6 +1,7 @@
 import React from 'react'
 import MaterialTable from 'material-table'
 import { ThemeProvider,createTheme, Stack, TextField, Autocomplete  } from '@mui/material';
+import InventoryNavbar from '../Navbar/InventoryNavbar';
 const Monthlyreport = () => {
   const { useState } = React;
   const top100Films = [
@@ -145,7 +146,8 @@ const Monthlyreport = () => {
   ]);
   const defaultMaterialTheme = createTheme();
   return (
-   
+   <>
+     <InventoryNavbar/>
     <div className='mx-6'>
        <Stack direction="row" spacing={2} margin="23px" justifyContent="center">
      <TextField type="Date" sx={{width:200}} id="outlined-basic" label="" variant="outlined"  />
@@ -195,6 +197,7 @@ const Monthlyreport = () => {
   <center> <button type="submit" className=" text-white bg-red-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-10 mb-1 mt-1 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 relative my-2">Grand Total = </button></center> 
 
     </div>
+    </>
   )
 }
 

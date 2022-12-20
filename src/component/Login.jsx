@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import FirstpageNavbar from './Navbar/FirstpageNavbar'
+import logo from '../images/logo.jpeg'
 const Login = () => {
   return (
    
     <div >
+      <FirstpageNavbar/>
 
-        <div className="flex flex-col h-screen bg-center bg-cover bg-no-repeat">
+
+        {/* <div className="flex flex-col h-screen bg-center bg-cover bg-no-repeat">
 			<div className="grid place-items-center mx-auto p-20 sm:my-auto bg-white rounded-3xl space-y-10">
             <h1 className="text-5xl font-semibold text-blue-500">Login to Admin or Users</h1>
     <div className="flex items-center justify-center space-x-3">
@@ -28,7 +32,12 @@ const Login = () => {
     </button> </Link>
     </div>
 			</div>
-		</div>
+		</div> */}
+    
+
+      <div  className=''>
+     <center><img src={logo} alt="" className=''/></center>   
+      </div>
     </div>
   )
 }

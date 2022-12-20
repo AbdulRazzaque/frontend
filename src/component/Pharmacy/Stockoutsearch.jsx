@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import InventoryNavbar from '../Navbar/InventoryNavbar'
 
 const Stockoutsearch = () => {
   return (
     <div>
-
+  <InventoryNavbar/>
               <h1 className='text-center my-8 font-bold text-2xl'>Stock-out Search</h1>
 
 <div className="flex justify-center">
