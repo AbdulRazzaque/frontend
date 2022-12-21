@@ -5,13 +5,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import '../../app.css'
+import './navbar.css'
+import logo from '../../images/logo.jpeg'
 const FirstpageNavbar = () => {
     return (
         <div>
                
             <Navbar bg="light" expand="lg">
               <Container>
-         <Link to="/">   <Navbar.Brand >  Tharb-Inventory</Navbar.Brand></Link> 
+              <Link to="/">   <Navbar.Brand  className='navbr_brand'>  Inventory Managment System</Navbar.Brand></Link> 
+              <img src={logo} className="navabar_logo" alt="" / >
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">

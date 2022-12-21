@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import FirstpageNavbar from './Navbar/FirstpageNavbar'
-import logo from '../images/logo.jpeg'
+import inventory from '../images/inventory.jpg'
 const Login = () => {
   return (
    
@@ -36,7 +35,8 @@ const Login = () => {
     
 
       <div  className=''>
-     <center><img src={logo} alt="" className=''/></center>   
+
+     <center><img src={inventory} alt="" className='h-screen '/></center>   
       </div>
     </div>
   )
