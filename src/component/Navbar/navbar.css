@@ -1,11 +1,12 @@
-.navbr_brand{
+/* .navbr_brand{
     position: relative;
     left:550px;
     font: bold !important;
-}
+} */
 .navabar_logo{
     height: 46px;
     width: 61px;
     position: relative;
-    right: 317px;
+    left: -88px;
 }
+

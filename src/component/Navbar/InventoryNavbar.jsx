@@ -10,17 +10,19 @@ import logo from '../../images/logo.jpeg'
 const InventoryNavbar = () => {
   return (
     <div>
-           
+           <h1 className='text-center mt-2 mb-2'> Inventory Mangament System</h1>
         <Navbar bg="light" expand="lg" className=''>
           <Container>
           
-        <Link to="/">   <Navbar.Brand  className='navbr_brand'>  Inventory Managment System</Navbar.Brand></Link> 
-        <img src={logo} className="navabar_logo" alt="" / >
+        <Link to="/">   <Navbar.Brand  className='navbr_brand'>  </Navbar.Brand></Link> 
+        <Link to="/">    <img src={logo} className="navabar_logo" alt="" / ></Link> 
+
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 {/* <Nav.Link href="#home">Add User</Nav.Link>
                 <Nav.Link href="#link">Add Produuts</Nav.Link> */}
+                
                 <NavDropdown title="Transection" id="basic-nav-dropdown">
                 <Link to="/stockin">   <NavDropdown.Item href="#action/3.1">Stock-in</NavDropdown.Item></Link>
                 <Link to="/stockout">    <NavDropdown.Item href="#action/3.2">Stock-out</NavDropdown.Item></Link>
@@ -34,7 +36,7 @@ const InventoryNavbar = () => {
                 </NavDropdown>
 
 
-                <NavDropdown title="Inventory" id="basic-nav-dropdown">
+                <NavDropdown title="Inventory" id="basic-nav-dropdown"  >
 
                   <Link to="/stockinventoty">       <NavDropdown.Item href="#action/3.3">Stock-inventoty</NavDropdown.Item></Link>
                   <Link to="/monthlyreport">       <NavDropdown.Item href="#action/3.4">Monthly Report</NavDropdown.Item></Link>

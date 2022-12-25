@@ -11,10 +11,12 @@ import logo from '../../images/logo.jpeg'
 
 const AdminNavbar = () => {
     return (
+      <div>
+        <h1 className='text-center'>Inventroy Managment System</h1>
         <Navbar bg="light" expand="lg">
           <Container>
-          <Link to="/">   <Navbar.Brand  className='navbr_brand'>  Inventory Managment System</Navbar.Brand></Link> 
-              <img src={logo} className="navabar_logo" alt="" / >
+          <Link to="/">   <Navbar.Brand  className='navbr_brand'> </Navbar.Brand></Link> 
+          <Link to="/">    <img src={logo} className="navabar_logo" alt="" / ></Link> 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -36,6 +38,7 @@ const AdminNavbar = () => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        </div>
       );
     
 }
