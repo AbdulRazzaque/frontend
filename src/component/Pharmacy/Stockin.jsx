@@ -187,7 +187,7 @@ const Stockin = () => {
         </Stack>
         <Stack direction="row" spacing={2} justifyContent='center' marginTop="5px">
    
-        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Quantity" variant="outlined"  />
+        <TextField type="number" sx={{width:200}} id="outlined-basic" label="Quantity"   variant="outlined"  />
         <TextField type="number" sx={{width:200}} id="outlined-basic" label="Price" variant="outlined"  />
         <TextField type="number" sx={{width:200}} id="outlined-basic" label="Expiry" variant="outlined"  />
 

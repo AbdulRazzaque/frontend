@@ -23,6 +23,8 @@ import Stockinventoty from "./component/Pharmacy/Stockinventoty";
 import Stockoutsearch from "./component/Pharmacy/Stockoutsearch";
 import Stockoutdetails from "./component/Pharmacy/Stockoutdetails";
 import Navbar1 from "./component/Navbar/AdminNavbar";
+import Stockoutpdf from "./component/Pharmacy/Stockoutpdf";
+import MonthlystockPdf from "./component/Pharmacy/MonthlystockPdf";
 function App() {
   return (
     <div className="App">
@@ -60,6 +62,8 @@ function App() {
         <Route  path="/stockinventoty" element={<Stockinventoty/>} />
         <Route  path="/stockoutsearch" element={<Stockoutsearch/>} />
         <Route  path="/stockoutdetails" element={<Stockoutdetails/>} />
+        <Route  path="/stockoutpdf" element={<Stockoutpdf/>} />
+        <Route  path="/monthlystockpdf" element={<MonthlystockPdf/>} />
  
 
         <Route  path="/demo" element={<Demo/>} />
